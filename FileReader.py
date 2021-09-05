@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 import os
 
-GOOGLE_APPLICATION_CREDENTIALS = os.environ['GOOGLE_APPLICATION_CREDENTIALS']
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'C:/Users/andya/Desktop/credits/creds.json'
 
 
 class Reader:
@@ -13,10 +13,10 @@ class Reader:
         self.sheet_id = 0
         self.range_name = 'A1:E13'
 
-        self.credentials = GOOGLE_APPLICATION_CREDENTIALS
+        self.credentials = 'C:/Users/andya/Desktop/credits/credentials.json'
 
     def read_spreadsheet(self):
-        with build('sheets', 'v4', credentials=self.credentials) as service:
+        with build('sheets', 'v4') as service:
             result = service.spreadsheets().values().get(spreadsheetId=self.spreadsheet_id,
                                                          range=self.range_name).execute()
             rows = result.get('values', [])
