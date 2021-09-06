@@ -22,6 +22,7 @@ class Reader:
             rows = result.get('values', [])
             print('{0} rows retrieved.'.format(len(rows)))
 
+        return rows
         pass
 
 

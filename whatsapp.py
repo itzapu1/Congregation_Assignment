@@ -12,8 +12,8 @@ client = Client()
 # this is the Twilio sandbox testing number
 from_whatsapp_number='whatsapp:+14155238886'
 # replace this number with your own WhatsApp Messaging number
-to_whatsapp_number='whatsapp:+18322986840'
+to_whatsapp_number='whatsapp:+18322321390'
 
-client.messages.create(body='Ahoy, world!',
+client.messages.create(body='Hey! Onasis, I am sending this from the python program we were working on yesterday',
                        from_=from_whatsapp_number,
                        to=to_whatsapp_number)
