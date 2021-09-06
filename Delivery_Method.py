@@ -18,7 +18,7 @@ class Deliver:
     def daily_assignment(self):
         # now = datetime.datetime.now() '%A, %B %d, %Y'
         today = date.today()
-        day = today + timedelta(days=0)
+        day = today + timedelta(days=2)
 
         i = 0
         while i < 12:
